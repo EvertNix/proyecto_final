@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../partials/alerts.ejs') %> <%- include('../partials/nav.ejs')
+    %>
+    <main>
+      <section class="section reservations">
+        <div class="container">
+          <% if (reservations) { %> <% for (var i = 0; i < reservations.length;
+          i++) { %>
+          <div class="row">
+            <ul>
+              <li><span>Destino: </span> <%= reservations[i].destination %></li>
+              <li>
+                <span>Fecha de entrada: </span> <%= reservations[i].check_in %>
+              </li>
+              <li>
+                <span>Fecha de salida: </span> <%= reservations[i].check_out %>
+              </li>
+            </ul>
+            <a
+              href="/delete/<%= reservations[i].id %>"
+              style="
+                display: inline-block;
+                margin: auto;
+                padding: 14px;
+                background: rgb(244, 54, 67);
+                color: rgb(254, 253, 253);
+              "
+            >
+              Eliminar reservación
+            </a>
+          </div>
+          <% } %> <% } else { %> 
+          <p>
+            Aún no haz hecho ninguna reserva para viajar
+            <a href="/reservations">Hazla ahora</a>
+          </p>
+          <% } %>
+        </div>
+      </section>
+    </main>
+    <%- include('../partials/script.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/alerts.ejs') %> <%- include('./partials/nav.ejs') %>
+    <header class="header">
+      <img src="./img/panamá.jpg" alt="" />
+      <div class="text">
+        <h2>Ven a conocer Panamá</h2>
+      </div>
+    </header>
+    <main>
+      <section class="section panama">
+        <div class="container">
+          <div class="paragraph">
+            <span>Panamá</span>
+            <p>
+              Es un país que está ubicado en el istmo que une América Central y
+              América del Sur. Allí se encuentra el Canal de Panamá, un famoso
+              hito de la ingeniería humana, atraviesa su centro y une los
+              océanos Atlántico y Pacífico para crear una ruta marítima
+              esencial. En la capital, la ciudad de Panamá, los clubes, casinos
+              y rascacielos modernos contrastan con los edificios coloniales del
+              Casco Viejo y la selva del Parque Natural Metropolitano.
+            </p>
+          </div>
+          <div class="imgs">
+            <img src="./img/panama_capital.jpg" alt="" />
+            <img src="./img/acg.jpg" alt="" />
+            <img src="./img/canal.jpg" alt="" />
+            <img src="./img/bocas.jpg" alt="" />
+            <img src="./img/riu.jpg" alt="" />
+            <img src="./img/mapa_panama.png" alt="" />
+          </div>
+          <a
+            href="/reservations"
+            style="
+              display: inline-block;
+              padding: 14px;
+              background: rgb(211, 84, 0);
+              color: rgb(33, 33, 33);
+            "
+            >Reserva tu viaje a Panamá YA</a
+          >
+        </div>
+      </section>
+      <section style="background: rgb(254, 253, 253)" class="section index">
+        <div class="container">
+          <div class="card">
+            <div class="img">
+              <img src="./img/comidas.jpg" alt="" />
+            </div>
+            <div class="p">
+              <a style="color: rgb(33, 33, 33)" href="/foods">Comidas</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./img/hoteles.jpg" alt="" />
+            </div>
+            <div class="p">
+              <a style="color: rgb(33, 33, 33)" href="/hotels">Hoteles</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./img/provincias.jpg" alt="" />
+            </div>
+            <div class="p">
+              <a style="color: rgb(33, 33, 33)" href="/provinces">Provincias</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="./img/galeria.jpg" alt="" />
+            </div>
+            <div class="p">
+              <a style="color: rgb(33, 33, 33)" href="/gallery">Galería</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %> <%- include('./partials/script.ejs')
+    %>
+  </body>
+</html>

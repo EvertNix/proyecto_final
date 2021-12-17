@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@400;600&family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Mono", monospace;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  background: rgb(248, 249, 249);
+  color: rgb(33, 33, 33);
+}
+/*---- container ----*/
+.container {
+  width: 98%;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 82%;
+  }
+}
+/*---- form ----*/
+form {
+  background: rgb(254, 253, 253);
+  border: 1px solid rgb(208, 211, 212);
+}
+/*---- alerts ----*/
+.alerts {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.alerts.error p {
+  color: rgb(244, 67, 54);
+}
+.alerts.success p {
+  color: rgb(0, 204, 0);
+}
+/*---- nav ----*/
+.nav {
+  background: rgb(254, 253, 253);
+}
+.nav .container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .title {
+  font-size: 32px;
+  font-family: "Lemonada", cursive;
+  color: rgb(211, 84, 0);
+}
+.nav .ul {
+  display: flex;
+  gap: 32px;
+}
+.ul .li {
+  list-style: none;
+}
+.li a {
+  display: inline-block;
+  padding: 8px 0;
+  color: rgb(33, 33, 33);
+}
+.li a:hover {
+  border-bottom: 1px solid rgb(211, 84, 0);
+}
+.user {
+  position: relative;
+}
+.user .btn_user {
+  font-size: 16px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.user .actions {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 240px;
+  background: rgb(254, 253, 253);
+  border: 1px solid rgb(33, 33, 33);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+.user .actions.active {
+  z-index: 2;
+  opacity: 2;
+  visibility: visible;
+}
+.actions .action {
+  list-style: none;
+}
+.action a {
+  display: block;
+  margin: 8px 0;
+  padding: 14px;
+  color: rgb(33, 33, 33);
+  transition: background 0.2s ease;
+}
+.action a:hover {
+  background: rgba(208, 211, 212, 0.4);
+}
+/*---- header ----*/
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header .text {
+  position: relative;
+  width: 720px;
+  padding: 64px;
+  text-align: center;
+  background: none;
+}
+.header .text img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+.header .text h2 {
+  position: relative;
+  font-size: 64px;
+  font-family: "Lemonada", cursive;
+  color: rgb(254, 253, 253);
+}
+.header .text a {
+  position: relative;
+  display: inline-block;
+  padding: 14px;
+  background: rgb(211, 84, 0);
+  color: rgb(33, 33, 33);
+}
+/*---- section ----*/
+.section {
+  padding: 64px 0;
+}
+.section h4 {
+  text-align: center;
+  font-size: 48px;
+}
+/*---- panama ----*/
+.panama .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.panama .paragraph {
+  position: relative;
+  width: 720px;
+  text-align: center;
+}
+.paragraph span {
+  font-size: 48px;
+  font-family: "Lemonada", cursive;
+}
+.paragraph p {
+  margin-top: 32px;
+}
+.panama .imgs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.panama .imgs img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+/*---- index ----*/
+.index .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.section .card {
+  width: 480px;
+  border: 1px solid rgb(208, 211, 212);
+}
+.card .img {
+  padding: 32px;
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .p {
+  display: block;
+  padding: 14px 0;
+  border-top: 1px solid rgb(208, 211, 212);
+  text-align: center;
+}
+.foods .container,
+.hotels .container,
+.provinces .container {
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+/*---- foods ----*/
+.food {
+  width: 480px;
+  border: 1px solid rgb(208, 211, 212);
+}
+.food .img {
+  height: 240px;
+  padding: 32px;
+}
+.food .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.food .p {
+  padding: 14px;
+  border-top: 1px solid rgb(208, 211, 212);
+}
+.food .p h6 {
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(211, 84, 0);
+}
+/*---- hotels ----*/
+.hotel {
+  width: 640px;
+  border: 1px solid rgb(208, 211, 212);
+}
+.hotel .img {
+  height: 420px;
+  padding: 32px;
+}
+.hotel .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hotel .description {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(208, 211, 212);
+}
+/*---- provinces ----*/
+.province {
+  width: 480px;
+  border: 1px solid rgb(208, 211, 212);
+}
+.province .img {
+  height: 320px;
+  padding: 32px;
+  border-bottom: none;
+}
+.province .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.province .info {
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(208, 211, 212);
+}
+.info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.info ul li {
+  list-style: none;
+}
+.info ul li span {
+  color: rgb(211, 84, 0);
+}
+/*---- gallery ----*/
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-auto-rows: 240px;
+  gap: 32px;
+}
+.gallery .img {
+  width: 100%;
+}
+.gallery .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .img:nth-child(1),
+.gallery .img:nth-child(15) {
+  grid-column-start: span 2;
+}
+.gallery .img:nth-child(10) {
+  grid-row-start: span 2;
+}
+/*---- reservations ----*/
+form.reservation {
+  width: 640px;
+  margin: auto;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+form.reservation div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+form.reservation input {
+  padding: 14px;
+  width: 240px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid rgb(208, 211, 212);
+  outline: none;
+  transition: border 0.2s ease;
+}
+form.reservation input:focus {
+  border-color: rgb(211, 84, 0);
+}
+/*---- reservations ----*/
+.reservations .container {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.reservations .row {
+  width: 320px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgb(254, 253, 253);
+  border: 1px solid rgb(208, 211, 212);
+}
+.row ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.row ul li {
+  list-style: none;
+}
+.row ul li span {
+  color: rgb(211, 84, 0);
+}
+/*---- footer ----*/
+.footer {
+  position: relative;
+  background: rgb(211, 84, 0);
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0;
+}
+.footer .title {
+  font-size: 24px;
+  font-family: "Lemonada", cursive;
+  color: rgb(33, 33, 33);
+}
+.footer .list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer ul li a {
+  color: rgb(33, 33, 33);
+}
+.footer .social_networks {
+  display: flex;
+  gap: 32px;
+}
+.footer .social_network a {
+  font-size: 24px;
+}
+.footer .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer .contact i {
+  font-size: 24px;
+}
+.footer .webmasters {
+  height: 64px;
+  background: rgb(220, 118, 51);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*---- auth ----*/
+.form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form.register,
+form.login {
+  width: 480px;
+}
+form .title {
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(208, 211, 212);
+}
+form .title h2 {
+  font-family: "Lemonada", cursive;
+  font-size: 32px;
+}
+form .wrapper {
+  padding: 16px 32px;
+}
+.input {
+  position: relative;
+  margin-bottom: 32px;
+}
+.input input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid rgb(208, 211, 212);
+  outline: none;
+  transition: border 0.4s ease;
+}
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  background: rgb(254, 253, 253);
+  pointer-events: none;
+  transition: top 0.2s ease;
+}
+.input input:focus,
+.input input:valid {
+  border-color: rgb(211, 84, 0);
+}
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: 0;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 16px;
+  background: rgb(211, 84, 0);
+  color: rgb(33, 33, 33);
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/alerts.ejs') %> <%- include('../partials/nav.ejs')
+    %>
+    <main>
+      <div class="form">
+        <form action="/login" method="post" class="login">
+          <div class="title">
+            <h2>Panamá Turistica</h2>
+            <p>Ingresa a tu cuenta y disfruta</p>
+          </div>
+          <div class="wrapper">
+            <div class="input">
+              <input type="text" name="username" required />
+              <label> Nombre de usuario </label>
+            </div>
+            <div class="input">
+              <input type="password" name="password" required />
+              <label> Contraseña </label>
+            </div>
+            <button class="btn" type="submit">Inicia Sesión</button>
+          </div>
+          <p style="display: block; padding: 14px 0; text-align: center">
+            ¿Aún no tienes cuenta?
+            <a href="/register" style="color: rgb(211, 84, 0)"> Registrate </a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <%- include('../partials/footer.ejs') %> <%-
+    include('../partials/script.ejs') %>
+  </body>
+</html>

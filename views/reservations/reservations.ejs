@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../partials/nav.ejs') %>
+    <main>
+      <section class="section">
+        <div class="container">
+          <form action="/reservations" method="post" class="reservation">
+            <div>
+              <input
+                type="text"
+                name="destination"
+                placeholder="Lugar de destino"
+                required
+              />
+            </div>
+            <div>
+              <label> Check In </label>
+              <input type="date" name="check_in" id="" required />
+            </div>
+            <div>
+              <label> Check Out </label>
+              <input type="date" name="check_out" id="" required />
+            </div>
+            <button
+              type="submit"
+              style="
+                display: inline-block;
+                padding: 14px;
+                font-size: 16px;
+                background: rgb(211, 84, 0);
+                border: none;
+                cursor: pointer;
+              "
+            >
+              Reservar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include('../partials/script.ejs') %>
+  </body>
+</html>

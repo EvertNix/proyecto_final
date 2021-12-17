@@ -1,0 +1,47 @@
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="title">Panamá Turistica</a>
+    <ul class="ul">
+      <li class="li">
+        <a href="/">Inicio</a>
+      </li>
+      <li class="li">
+        <a href="/foods">Comidas</a>
+      </li>
+      <li class="li">
+        <a href="/hotels">Hoteles</a>
+      </li>
+      <li class="li">
+        <a href="/provinces">Provincias</a>
+      </li>
+      <li class="li">
+        <a href="/gallery">Galería</a>
+      </li>
+    </ul>
+    <% if (user) { %>
+    <div class="user">
+      <button class="btn_user" id="user"><%= user.username %></button>
+      <ul class="actions" id="actions">
+        <li class="action">
+          <a href="/reservations">Hacer mi reservación</a>
+        </li>
+        <li class="action">
+          <a href="/users-reservations">Mis reservaciones</a>
+        </li>
+        <li class="action">
+          <a href="/logout">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+    <% } else { %>
+    <ul class="ul">
+      <li class="li">
+        <a href="/register">Registrate</a>
+      </li>
+      <li class="li">
+        <a href="/login">Inicia Sesión</a>
+      </li>
+    </ul>
+    <% } %>
+  </div>
+</nav>

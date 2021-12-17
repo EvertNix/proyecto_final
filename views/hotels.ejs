@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+      <section class="section hotels">
+        <h4>Algunos hoteles en Panamá</h4>
+        <div class="container">
+          <div class="hotel">
+            <div class="img">
+              <img src="./img/riu.jpg" alt="" />
+            </div>
+            <div class="description">
+              <div class="name">Hotel Riu Plaza Panamá</div>
+              <div class="price">B/. 88</div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="img">
+              <img src="./img/grand.jpg" alt="" />
+            </div>
+            <div class="description">
+              <div class="name">Grand International Hotel</div>
+              <div class="price">B/. 43</div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="img">
+              <img src="./img/nocotel.jpg" alt="" />
+            </div>
+            <div class="description">
+              <div class="name">Novotel Panama City</div>
+              <div class="price">B/. 58</div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="img">
+              <img src="./img/wyndham.jpg" alt="" />
+            </div>
+            <div class="description">
+              <div class="name">Wyndham Panama Albrook Mall Hotel</div>
+              <div class="price">B/. 98</div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="img">
+              <img src="./img/hard_rock.jpg" alt="" />
+            </div>
+            <div class="description">
+              <div class="name">Hard Rock Hotel</div>
+              <div class="price">
+                <a href="#">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="hotel">
+            <div class="img">
+              <img src="./img/crowne.jpg" alt="" />
+            </div>
+            <div class="description">
+              <div class="name">Crowne Plaza Panama Airport</div>
+              <div class="price">B/. 127</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./partials/script.ejs') %>
+  </body>
+</html>
